@@ -1,0 +1,20 @@
+D:\MY_FOLDER\Work\4_CODE\C#\CompleteCourse\StartingCourse\WPF APP\bin\Debug\net7.0-windows\WPF APP.exe
+D:\MY_FOLDER\Work\4_CODE\C#\CompleteCourse\StartingCourse\WPF APP\bin\Debug\net7.0-windows\WPF APP.deps.json
+D:\MY_FOLDER\Work\4_CODE\C#\CompleteCourse\StartingCourse\WPF APP\bin\Debug\net7.0-windows\WPF APP.runtimeconfig.json
+D:\MY_FOLDER\Work\4_CODE\C#\CompleteCourse\StartingCourse\WPF APP\bin\Debug\net7.0-windows\WPF APP.dll
+D:\MY_FOLDER\Work\4_CODE\C#\CompleteCourse\StartingCourse\WPF APP\bin\Debug\net7.0-windows\WPF APP.pdb
+D:\MY_FOLDER\Work\4_CODE\C#\CompleteCourse\StartingCourse\WPF APP\obj\Debug\net7.0-windows\MainWindow.g.cs
+D:\MY_FOLDER\Work\4_CODE\C#\CompleteCourse\StartingCourse\WPF APP\obj\Debug\net7.0-windows\App.g.cs
+D:\MY_FOLDER\Work\4_CODE\C#\CompleteCourse\StartingCourse\WPF APP\obj\Debug\net7.0-windows\WPF APP_MarkupCompile.cache
+D:\MY_FOLDER\Work\4_CODE\C#\CompleteCourse\StartingCourse\WPF APP\obj\Debug\net7.0-windows\WPF APP_MarkupCompile.lref
+D:\MY_FOLDER\Work\4_CODE\C#\CompleteCourse\StartingCourse\WPF APP\obj\Debug\net7.0-windows\MainWindow.baml
+D:\MY_FOLDER\Work\4_CODE\C#\CompleteCourse\StartingCourse\WPF APP\obj\Debug\net7.0-windows\WPF APP.g.resources
+D:\MY_FOLDER\Work\4_CODE\C#\CompleteCourse\StartingCourse\WPF APP\obj\Debug\net7.0-windows\WPF APP.GeneratedMSBuildEditorConfig.editorconfig
+D:\MY_FOLDER\Work\4_CODE\C#\CompleteCourse\StartingCourse\WPF APP\obj\Debug\net7.0-windows\WPF APP.AssemblyInfoInputs.cache
+D:\MY_FOLDER\Work\4_CODE\C#\CompleteCourse\StartingCourse\WPF APP\obj\Debug\net7.0-windows\WPF APP.AssemblyInfo.cs
+D:\MY_FOLDER\Work\4_CODE\C#\CompleteCourse\StartingCourse\WPF APP\obj\Debug\net7.0-windows\WPF APP.csproj.CoreCompileInputs.cache
+D:\MY_FOLDER\Work\4_CODE\C#\CompleteCourse\StartingCourse\WPF APP\obj\Debug\net7.0-windows\WPF APP.dll
+D:\MY_FOLDER\Work\4_CODE\C#\CompleteCourse\StartingCourse\WPF APP\obj\Debug\net7.0-windows\refint\WPF APP.dll
+D:\MY_FOLDER\Work\4_CODE\C#\CompleteCourse\StartingCourse\WPF APP\obj\Debug\net7.0-windows\WPF APP.pdb
+D:\MY_FOLDER\Work\4_CODE\C#\CompleteCourse\StartingCourse\WPF APP\obj\Debug\net7.0-windows\WPF APP.genruntimeconfig.cache
+D:\MY_FOLDER\Work\4_CODE\C#\CompleteCourse\StartingCourse\WPF APP\obj\Debug\net7.0-windows\ref\WPF APP.dll
