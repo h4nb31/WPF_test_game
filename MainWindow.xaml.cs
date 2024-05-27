@@ -48,6 +48,7 @@ namespace WPF_APP
                 string nextEmoji = animalEmoji[index];
                 textBlock.Text = nextEmoji;
                 animalEmoji.RemoveAt(index);
+                //some comment
             }
         }
     }
