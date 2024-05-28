@@ -94,7 +94,7 @@ namespace WPF_APP
             matchesFound = 0;
         }
 
-        TextBlock lastTextBlockClicked;
+        TextBlock lastTextBlockClicked = null!;
         bool findingMatch = false;
 
         private void TextBlock_MouseDown(object sender, MouseButtonEventArgs e)
