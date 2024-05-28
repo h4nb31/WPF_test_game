@@ -24,7 +24,7 @@ namespace WPF_APP
         }
 
         private int tenthsOfSecondsElapsed;
-        int matchesFound;
+        private int matchesFound;
         private void Timer_Tick(object? sender, EventArgs e)
         {
             tenthsOfSecondsElapsed--;
