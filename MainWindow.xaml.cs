@@ -1,17 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace WPF_APP
 {
@@ -21,9 +13,7 @@ namespace WPF_APP
     /// </summary>
     public partial class MainWindow : Window
     {
-        DispatcherTimer timer = new();
-        int tenthsOfSecondsElapsed;
-        int matchesFound;
+        readonly DispatcherTimer timer = new();
         public MainWindow()
         {
             InitializeComponent();
@@ -33,17 +23,44 @@ namespace WPF_APP
             SetUpGame();
         }
 
+        private int tenthsOfSecondsElapsed;
+        int matchesFound;
         private void Timer_Tick(object? sender, EventArgs e)
         {
-            tenthsOfSecondsElapsed++;
+            tenthsOfSecondsElapsed--;
             timerTextBlock.Text = (tenthsOfSecondsElapsed / 10F).ToString("0.0s");
-            if (matchesFound == 8)
+            if (tenthsOfSecondsElapsed == 0)
             {
                 timer.Stop();
-                timerTextBlock.Text += " - Play again?";
+                foreach (TextBlock textBlock in mainGrid.Children.OfType<TextBlock>())
+                {
+                    if (textBlock.Name != "timerTextBlock")
+                    {
+                        textBlock.Visibility = Visibility.Visible;
+                        DisableMouseHandler();
+                    }
+                }
+                timerTextBlock.Text = "Time is up! Again?";
+            }
+            else if (matchesFound == 8)
+            {
+                timer.Stop();
+                timerTextBlock.Text += " - WIN! Again?";
             }
         }
 
+        private void DisableMouseHandler()
+        {
+            foreach (TextBlock textBlock in mainGrid.Children.OfType<TextBlock>())
+            {
+                if (textBlock.Name != "timerTextBlock")
+                {
+                    textBlock.MouseDown -= TextBlock_MouseDown;
+                }
+            }
+        }
+
+        //Основная старт игры и заполнение
         private void SetUpGame()
         {
             List<string> animalEmoji = new()
@@ -55,14 +72,14 @@ namespace WPF_APP
                 "🦔","🦔",
                 "🦘","🦘",
                 "🐫","🐫",
-                "🦕","🦕" 
+                "🦕","🦕"
             };
 
             Random random = new();
 
-            foreach (TextBlock textBlock in mainGrid.Children.OfType<TextBlock>()) 
+            foreach (TextBlock textBlock in mainGrid.Children.OfType<TextBlock>())
             {
-                if (textBlock.Name != "timerTextBlock") 
+                if (textBlock.Name != "timerTextBlock")
                 {
                     int index = random.Next(animalEmoji.Count);
                     string nextEmoji = animalEmoji[index];
@@ -73,7 +90,7 @@ namespace WPF_APP
             }
 
             timer.Start();
-            tenthsOfSecondsElapsed = 0;
+            tenthsOfSecondsElapsed = 100;
             matchesFound = 0;
         }
 
@@ -104,9 +121,18 @@ namespace WPF_APP
 
         private void TimeTextBlock_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (matchesFound == 8) 
+            if (matchesFound == 8)
             {
                 SetUpGame();
+            }
+            else if (tenthsOfSecondsElapsed == 0) 
+            {
+                SetUpGame();
+                foreach (TextBlock textBlock in mainGrid.Children.OfType<TextBlock>())
+                {
+                    if (textBlock.Name != "timerTextBlock")
+                        textBlock.MouseDown += TextBlock_MouseDown;
+                }
             }
         }
     }
